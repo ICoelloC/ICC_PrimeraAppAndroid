@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PrimeraAppAndroid</string>
+    <string name="iconoMainLogoNotas">mainIconImageNotes</string>
+    <string name="mainImageButtonContacts">mainIconImageContacts</string>
 </resources>
