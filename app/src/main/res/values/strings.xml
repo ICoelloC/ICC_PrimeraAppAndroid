@@ -2,4 +2,7 @@
     <string name="app_name">PrimeraAppAndroid</string>
     <string name="iconoMainLogoNotas">mainIconImageNotes</string>
     <string name="mainImageButtonContacts">mainIconImageContacts</string>
+    <string name="mainImageButtonCalendarEvents">mainIconImageCalendarEvents</string>
+    <string name="mainImageButtonSendMails">mainIconImageSendMails</string>
+    <string name="mainImageButtonAboutMe">mainIconImageAboutMe</string>
 </resources>
