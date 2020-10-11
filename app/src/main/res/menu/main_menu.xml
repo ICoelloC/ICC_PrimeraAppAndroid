@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/menu_notas" android:id="@+id/menu_notas"/>
+    <item android:title="@string/menu_contactos" android:id="@+id/menu_contactos"/>
+    <item android:title="@string/menu_correos" android:id="@+id/menu_correos"/>
+    <item android:title="@string/menu_eventos_calendario" android:id="@+id/menu_eventos_calendario"/>
+    <item android:title="@string/menu_acerca_de" android:id="@+id/menu_acerca_de"/>
+</menu>

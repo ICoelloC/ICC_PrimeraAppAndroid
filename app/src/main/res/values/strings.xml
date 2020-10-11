@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">PrimeraAppAndroid</string>
-    <string name="iconoMainLogoNotas">mainIconImageNotes</string>
-    <string name="mainImageButtonContacts">mainIconImageContacts</string>
-    <string name="mainImageButtonCalendarEvents">mainIconImageCalendarEvents</string>
-    <string name="mainImageButtonSendMails">mainIconImageSendMails</string>
-    <string name="mainImageButtonAboutMe">mainIconImageAboutMe</string>
+    <string name="mainTextViewTitulo">Programación Multimedia y Dispositivos Móviles</string>
+    <string name="mainImageViewCIFPVdG">CIFPVdG</string>
+    <string name="menu_notas">Notas</string>
+    <string name="menu_contactos">Agregar Contacto</string>
+    <string name="menu_correos">Enviar Correo</string>
+    <string name="menu_eventos_calendario">Crear Evento</string>
+    <string name="menu_acerca_de">Acerca de</string>
+    <string name="acerca_de_fotoDesarrollador">TODO</string>
+    <string name="acerca_de_BotonTwitter">TODO</string>
 </resources>
