@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.CalendarContract
+import android.provider.ContactsContract
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
@@ -57,8 +58,7 @@ class MainActivity : AppCompatActivity() {
 
     //Accedemos a la Activity de Contactos
     private fun menuContactos(){
-        val intent = Intent(this,ContactoActivity::class.java)
-        startActivity(intent)
+        crearContacto()
     }
     //Enviamos un correo
     private fun menuEnviarCorreo() {
@@ -66,7 +66,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun menuCrearEvento(){
+        crearEvento()
+    }
 
+    fun crearContacto() {
+        val intent = Intent(Intent.ACTION_INSERT).apply {
+            type = ContactsContract.Contacts.CONTENT_TYPE
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
     }
 
     private fun mandarCorreo(receptor: String, asunto: String, mensaje: String) {
@@ -83,6 +92,15 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
         }
 
+    }
+
+    fun crearEvento() {
+        val intent = Intent(Intent.ACTION_INSERT).apply {
+            data = CalendarContract.Events.CONTENT_URI
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
     }
 
 }

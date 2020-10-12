@@ -10,7 +10,4 @@
     <string name="acerca_de_fotoDesarrollador">TODO</string>
     <string name="acerca_de_BotonTwitter">TODO</string>
     <string name="contacts_Title">Añadir Contacto</string>
-    <string name="contacto_Nombre">nombre</string>
-    <string name="contacto_Correo">correo</string>
-    <string name="contacto_botonAgregar">Agregar contacto</string>
 </resources>
