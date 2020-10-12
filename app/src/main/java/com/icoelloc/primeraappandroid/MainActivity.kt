@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.CalendarContract
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
@@ -26,18 +27,22 @@ class MainActivity : AppCompatActivity() {
 
     // Opciones a pulsar un estado del menú
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle item selection
+        // Según la opción seleccionada en el menú:
         return when (item.itemId) {
             R.id.menu_acerca_de -> {
                 menuAcercaDe()
                 true
             }
-            R.id.menu_eventos_calendario -> {
-                menuEnviarCorreo()
+            R.id.menu_contactos -> {
+                menuContactos()
                 true
             }
             R.id.menu_correos -> {
                 menuEnviarCorreo()
+                true
+            }
+            R.id.menu_eventos_calendario -> {
+                menuCrearEvento()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -50,11 +55,18 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    //Accedemos a la Activity de
-
+    //Accedemos a la Activity de Contactos
+    private fun menuContactos(){
+        val intent = Intent(this,ContactoActivity::class.java)
+        startActivity(intent)
+    }
     //Enviamos un correo
     private fun menuEnviarCorreo() {
         mandarCorreo("alumnoIvanCoello@alumno.com", "Práctica", "Espero aprobar esta práctica")
+    }
+
+    private fun menuCrearEvento(){
+
     }
 
     private fun mandarCorreo(receptor: String, asunto: String, mensaje: String) {
