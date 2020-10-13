@@ -35,4 +35,14 @@
             android:layout_marginStart="123dp" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="248dp" android:layout_marginTop="68dp"
             app:layout_constraintTop_toBottomOf="@+id/acerca_de_ImageViewFotoDesarrollador"/>
+    <TextView
+            android:text="@string/about_DevName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/acerca_de_ImageViewFotoDesarrollador"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="172dp"
+            android:layout_marginEnd="180dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="34dp" android:textSize="30sp"
+            app:layout_constraintHorizontal_bias="0.478" app:layout_constraintVertical_bias="0.818"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
