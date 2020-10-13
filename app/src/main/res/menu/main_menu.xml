@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/menu_notas" android:id="@+id/menu_notas"/>
-    <item android:title="@string/menu_contactos" android:id="@+id/menu_contactos"/>
-    <item android:title="@string/menu_correos" android:id="@+id/menu_correos"/>
-    <item android:title="@string/menu_eventos_calendario" android:id="@+id/menu_eventos_calendario"/>
-    <item android:title="@string/menu_acerca_de" android:id="@+id/menu_acerca_de"/>
+    <!--Para poder mostrar iconos en las opciones de arriba a la derecha, es necesario meter esos items en un contenedor
+    en este caso el contenedor seria:
+    1º item como contenedor de menu
+    2º menu como contenedor del resto de items
+
+    ¿Qué pasa si no metemos el menu dentro de un item?
+        Bien, lo que pasa es que al iniciar la aplicación, se caerá y no indicará que la aplicación ha dejado de
+        funcionar, al menos en mi móvil, no he podido probar en otros.
+
+    ¿Qué pasa si dejamos cada item sin un contenedor en el que meterlos?
+        Lo que pasa es que el menú con los items aparecería y funcionará sin problemas, pero no aparecerán los iconos de
+        las opciones.
+
+    -->
+    <item
+        android:id="@+id/menuPrincipal"
+        android:title="@string/menu_mas_opciones">
+
+        <menu>
+
+            <item
+                android:title="@string/menu_notas"
+                android:id="@+id/menu_notas"
+                android:icon="@drawable/ic_baseline_note"/>
+
+            <item
+                android:title="@string/menu_contactos"
+                android:id="@+id/menu_contactos"
+                android:icon="@drawable/ic_baseline_contact"/>
+
+            <item
+                android:title="@string/menu_correos"
+                android:id="@+id/menu_correos"
+                android:icon="@drawable/ic_baseline_email"/>
+
+            <item
+               android:title="@string/menu_eventos_calendario"
+               android:id="@+id/menu_eventos_calendario"
+               android:icon="@drawable/ic_baseline_event"/>
+
+            <item
+               android:title="@string/menu_acerca_de"
+               android:id="@+id/menu_acerca_de"
+               android:icon="@drawable/ic_baseline_about"/>
+
+        </menu>
+
+    </item>
+
+
+
 </menu>

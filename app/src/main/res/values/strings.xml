@@ -2,11 +2,13 @@
     <string name="app_name">PrimeraAppAndroid</string>
     <string name="mainTextViewTitulo">Programación Multimedia y Dispositivos Móviles</string>
     <string name="mainImageViewCIFPVdG">CIFPVdG</string>
-    <string name="menu_notas">Notas</string>
-    <string name="menu_contactos">Agregar Contacto</string>
-    <string name="menu_correos">Enviar Correo</string>
-    <string name="menu_eventos_calendario">Crear Evento</string>
+    <string name="menu_notas">Crear nota</string>
+    <string name="menu_contactos">Agregar contacto</string>
+    <string name="menu_correos">Enviar correo</string>
+    <string name="menu_eventos_calendario">Crear evento</string>
     <string name="menu_acerca_de">Acerca de</string>
     <string name="acerca_de_fotoDesarrollador">TODO</string>
     <string name="acerca_de_BotonTwitter">TODO</string>
+    <string name="contacts_Title">Añadir Contacto</string>
+    <string name="menu_mas_opciones">Más</string>
 </resources>
