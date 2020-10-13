@@ -6,6 +6,9 @@
 ### Fecha de entrega:
         Jueves 15 de Octubre de 2020
         
+### Funcionalidades Deshabilitadas:
+        Crear nota, debido a errores en el código, consulte el código para más info
+        
 - **Requisitos para la aplicación:**
     - Al **iniciar la aplicación**, debemos **mostrar** una pantalla de presentación (**SplashScreen**), con el **logotipo del CIFP Virgen de Gracia** e **indicando** que es el **módulo de Programación Multimedia y Dispositivos Móviles**.
     - **Poner un logo a nuestra aplicación a nuestro gusto**. Recomendado SVG antes que otro formato para las imágenes
