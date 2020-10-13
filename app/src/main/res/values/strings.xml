@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">PrimeraAppAndroid</string>
+    <string name="menu_mas_opciones">Más opciones</string>
     <string name="mainTextViewTitulo">Programación Multimedia y Dispositivos Móviles</string>
     <string name="mainImageViewCIFPVdG">CIFPVdG</string>
     <string name="menu_notas">Crear nota</string>
@@ -7,9 +8,6 @@
     <string name="menu_correos">Enviar correo</string>
     <string name="menu_eventos_calendario">Crear evento</string>
     <string name="menu_acerca_de">Acerca de</string>
-    <string name="acerca_de_fotoDesarrollador">TODO</string>
-    <string name="acerca_de_BotonTwitter">TODO</string>
-    <string name="contacts_Title">Añadir Contacto</string>
-    <string name="menu_mas_opciones">Más</string>
-    <string name="about_DevName">Iván Coello Cortés</string>
+    <string name="acerca_de_fotoDesarrollador">FotoDes</string>
+    <string name="about_DevName">NombreDes</string>
 </resources>

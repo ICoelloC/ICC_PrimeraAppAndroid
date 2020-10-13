@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FirstAndroidApp</string>
+    <string name="mainTextViewTitulo">Multimedia Programming and Mobile Devices</string>
+    <string name="mainImageViewCIFPVdG">CIFPVdG</string>
+    <string name="menu_notas">Create note</string>
+    <string name="menu_contactos">Add contact</string>
+    <string name="menu_correos">Send mail</string>
+    <string name="menu_eventos_calendario">Create event</string>
+    <string name="menu_acerca_de">About ...</string>
+    <string name="menu_mas_opciones">More options</string>
+    <string name="acerca_de_fotoDesarrollador">DevPhoto</string>
+    <string name="about_DevName">DevName</string>
+</resources>
