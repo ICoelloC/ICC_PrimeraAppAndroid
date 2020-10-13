@@ -9,6 +9,7 @@ import android.provider.ContactsContract
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     // Opciones a pulsar un estado del menú
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Según la opción seleccionada en el menú:
+        // Según la opción seleccionada en el menú que seleccionemos:
         return when (item.itemId) {
             R.id.menu_acerca_de -> {
                 menuAcercaDe()
@@ -72,7 +73,8 @@ class MainActivity : AppCompatActivity() {
     }
     //Creamos una nota
     private fun menuCrearNota(){
-        crearNota()
+        //crearNota();
+
     }
 
     /**
@@ -117,6 +119,7 @@ class MainActivity : AppCompatActivity() {
      * Link al api de Android--> https://developer.android.com/guide/components/intents-common?hl=es#AddEvent
      */
     fun crearEvento() {
+
         val intent = Intent(Intent.ACTION_INSERT).apply {
             data = CalendarContract.Events.CONTENT_URI
         }
@@ -125,8 +128,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun crearNota() {
+    /*
 
+    la función de la documentación(https://developer.android.com/guide/components/intents-common?hl=es#CreateNote), no
+    me deja implementarla correctamente, si se descomenta el codigo se verá el motivo.
+
+    fun createNote() {
+        val intent = Intent(NoteIntents.ACTION_CREATE_NOTE).apply {
+            putExtra(NoteIntents.EXTRA_NAME, "Subject")
+            putExtra(NoteIntents.EXTRA_TEXT, "Text")
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
     }
+    */
 
 }
