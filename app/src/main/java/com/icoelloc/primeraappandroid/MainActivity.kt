@@ -1,16 +1,17 @@
 package com.icoelloc.primeraappandroid
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.CalendarContract
-import android.provider.ContactsContract
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.view.View
+import com.google.android.gms.actions.NoteIntents
 import android.widget.Toast
+
+/**
+ * @author iCoelloC
+ */
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,87 +62,44 @@ class MainActivity : AppCompatActivity() {
     }
     //Creamos un contacto.
     private fun menuContactos(){
-        crearContacto()
+        val intent = Intent(this, CrearContactoActivity::class.java)
+        startActivity(intent)
     }
     //Enviamos un correo.
     private fun menuEnviarCorreo() {
-        mandarCorreo("alumnoIvanCoello@alumno.com", "Práctica", "Espero aprobar esta práctica")
+        val intent = Intent(this, EnviarCorreoActivity::class.java)
+        startActivity(intent)
     }
     //Creamos un evento
     private fun menuCrearEvento(){
-        crearEvento()
+        val intent = Intent(this, CrearEvento::class.java)
+        startActivity(intent)
     }
     //Creamos una nota
     private fun menuCrearNota(){
-        //crearNota();
-
+        crearNota()
     }
+
 
     /**
-     * Método que inicia la aplicación de Contactos para crear directamente un contacto.
+     * Método que nos permite escribir una nota en nuestro telefono, si nuestro teléfono tiene esta funcionalidad,
+     * lo hará si no la tiene, simplemente nos mostrará un toast con un mensaje que nos dirá que no tenemos ninguna
+     * app externa que nos permita realizar esta función.
      *
-     * Link al api de Android--> https://developer.android.com/guide/components/intents-common?hl=es#InsertContact
+     * Este es la página que me ha ayudado a implementar esta funcionalidad:
+     *      https://emaildjt.wixsite.com/mindwhys/single-post/2018/02/01/Android--
      */
-    fun crearContacto() {
-        val intent = Intent(Intent.ACTION_INSERT).apply {
-            type = ContactsContract.Contacts.CONTENT_TYPE
-        }
-        if (intent.resolveActivity(packageManager) != null) {
+    private fun crearNota(){
+        val titulo = "Lista de la compra"
+        val cuerpo = "Pan, Agua, Leche, Fruta, bla bla bla"
+        val intent = Intent(NoteIntents.ACTION_CREATE_NOTE)
+            .putExtra(NoteIntents.EXTRA_NAME,titulo)
+            .putExtra(NoteIntents.EXTRA_TEXT,cuerpo)
+        if (intent.resolveActivity(packageManager) != null){
             startActivity(intent)
+        }else{
+            Toast.makeText(this,"No hay aplicación disponible",Toast.LENGTH_SHORT).show()
         }
     }
-
-    /**
-     * Método para enviar un correo, en este caso
-     * @param receptor --> este sería el correo de la persona a la que le queremos envía un correo.
-     * @param asunto --> este es el asunto del correo.
-     * @param mensaje --> este sería el mensaje que querríamos envíar al receptor.
-     *
-     * Link al api de Android--> https://developer.android.com/guide/components/intents-common?hl=es#Email
-     */
-    private fun mandarCorreo(receptor: String, asunto: String, mensaje: String) {
-        val intent = Intent(Intent.ACTION_SEND)
-        intent.data = Uri.parse("mailto:")
-        intent.type = "text/plain"
-        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(receptor))
-        intent.putExtra(Intent.EXTRA_SUBJECT, asunto)
-        intent.putExtra(Intent.EXTRA_TEXT, mensaje)
-        try {
-            startActivity(Intent.createChooser(intent, "Enviar usando..."))
-        } catch (e: Exception) {
-            Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-        }
-    }
-
-    /**
-     * Método que inicia la aplicación de Google Calendar para crear directamente un evento
-     *
-     * Link al api de Android--> https://developer.android.com/guide/components/intents-common?hl=es#AddEvent
-     */
-    fun crearEvento() {
-
-        val intent = Intent(Intent.ACTION_INSERT).apply {
-            data = CalendarContract.Events.CONTENT_URI
-        }
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivity(intent)
-        }
-    }
-
-    /*
-
-    la función de la documentación(https://developer.android.com/guide/components/intents-common?hl=es#CreateNote), no
-    me deja implementarla correctamente, si se descomenta el codigo se verá el motivo.
-
-    fun createNote() {
-        val intent = Intent(NoteIntents.ACTION_CREATE_NOTE).apply {
-            putExtra(NoteIntents.EXTRA_NAME, "Subject")
-            putExtra(NoteIntents.EXTRA_TEXT, "Text")
-        }
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivity(intent)
-        }
-    }
-    */
 
 }

@@ -2,22 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.icoelloc.primeraappandroid">
 
+
+    <!-- La línea de abajo se ha cambiado para darle permiso a esta aplicación para crear una nota
+    NB La línea de permiso TIENE que ponerse aquí, dentro de la sección de manifiesto pero fuera de la
+    otras secciones -->
+
+    <uses-permission android:name = "com.android.permission.ACTION_CREATE_NOTE"/>
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher_round"
             android:label="@string/app_name"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".CrearEventoCalendarioActivity">
+        <activity android:name=".CrearEvento">
         </activity>
-        <activity android:name=".ContactoActivity">
+        <activity android:name=".EnviarCorreoActivity">
+        </activity>
+        <activity android:name=".CrearContactoActivity">
         </activity>
         <activity android:name=".AcercaDeActivity">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

@@ -9,5 +9,15 @@
     <string name="menu_eventos_calendario">Crear evento</string>
     <string name="menu_acerca_de">Acerca de</string>
     <string name="acerca_de_fotoDesarrollador">FotoDes</string>
-    <string name="about_DevName">NombreDes</string>
+    <string name="about_DevName">Iván Coello Cortés</string>
+    <string name="contactos_btnAgregar">Agregar</string>
+    <string name="contactos_txtNombre">Nombre</string>
+    <string name="contactos_txtCorreo">Correo</string>
+    <string name="CorreolblDestinarario">Destinatario</string>
+    <string name="correo_lblAsunto">Asunto</string>
+    <string name="correo_lblMensaje">Mensaje</string>
+    <string name="correo_btnEnviar">Enviar</string>
+    <string name="crearEvento_lblNombreEvento">Nombre del Evento</string>
+    <string name="crearEvento_lblLocalizacion">Localizacion</string>
+    <string name="crearEvento_btnCrear">Crear</string>
 </resources>

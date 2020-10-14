@@ -10,5 +10,15 @@
     <string name="menu_acerca_de">About ...</string>
     <string name="menu_mas_opciones">More options</string>
     <string name="acerca_de_fotoDesarrollador">DevPhoto</string>
-    <string name="about_DevName">DevName</string>
+    <string name="contactos_btnAgregar">Add</string>
+    <string name="about_DevName">Iván Coello Cortés</string>
+    <string name="contactos_txtNombre">Name</string>
+    <string name="contactos_txtCorreo">Mail</string>
+    <string name="correo_lblAsunto">Subject</string>
+    <string name="correo_lblMensaje">Message</string>
+    <string name="CorreolblDestinarario">Receiver</string>
+    <string name="correo_btnEnviar">Send</string>
+    <string name="crearEvento_lblNombreEvento">Name for event</string>
+    <string name="crearEvento_lblLocalizacion">Location</string>
+    <string name="crearEvento_btnCrear">Create</string>
 </resources>
